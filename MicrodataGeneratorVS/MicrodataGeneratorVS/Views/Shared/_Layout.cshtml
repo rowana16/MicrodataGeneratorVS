@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Schema.org Generator for SEO | JSON-LD</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/generator.js"></script>
+    <link rel="stylesheet" href="/css/style-generator.css">
+    <link href="/css/prism.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                   <h4> @Html.ActionLink("Microdata Generator","index")</h4>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">Home</a></li>
+                    
+                    <li><a href="/MicrodataGenerator/getStarted.html">Get Started</a></li>
+                    <li class="active">@Html.ActionLink("Generator","Generator")</li>
+                    <!-- <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    -->
+                </ul>
+                <div class="navbar-right">
+                    <h4> Microdata Generator Using Schema.org Vocabulary </h4>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Schema.org Generator for SEO | JSON-LDn</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
